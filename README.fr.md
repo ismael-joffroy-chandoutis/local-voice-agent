@@ -88,7 +88,7 @@ Pour refaire le banc, fabriquer une fois les questions (`python pipeline/make_qu
 
 - Le banc a utilisé des voix synthétiques. Le seuil de la garde et la latence ressentie sur un téléphone restent à vérifier avec de vraies voix.
 - Chaque échange du banc ne compte qu'un tour. La relecture du nom, du motif et du numéro sur plusieurs tours n'a été essayée que dans deux sessions simulées, où l'assistant n'a pas relu le numéro chiffre par chiffre.
-- Le STT a entendu le nom de société « Lumen Films » comme « L'Humaine Film », et la fiche a repris l'erreur. « Ismaël » était parfois compris « Ismail » en anglais.
+- Le STT a mal entendu le nom de société du scénario de test, et la fiche a repris l'erreur. « Ismaël » était parfois compris « Ismail » en anglais.
 - La dernière phrase de l'assistant, coupée par la déconnexion, n'est que partiellement dans la transcription.
 - Un modèle local de cette taille répond et prend des notes. Sa capacité à tenir une négociation ou une décision soumise à des règles n'a pas été testée ; c'est la raison pour laquelle l'agent qui appelle s'appuie sur Claude.
 - Aucune ligne téléphonique n'est branchée. Les appels arrivent d'un navigateur, en WebRTC.

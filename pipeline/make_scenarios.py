@@ -26,7 +26,7 @@ def scenario(name, lines):
 
 os.makedirs("questions", exist_ok=True)
 scenario("call-message", [
-    ("Bonjour, je suis Claire Martin, de la société Lumen Films.", 10),
+    ("Bonjour, je suis Claire Martin, de la société Films des Lucioles.", 10),
     ("Je vous appelle pour proposer un projet de court métrage à Ismaël, pour le printemps prochain.", 10),
     ("Mon numéro, c'est le zéro six, douze, trente-quatre, cinquante-six, soixante-dix-huit.", 12),
     ("Oui, c'est bien ça. Merci, au revoir.", 6)])

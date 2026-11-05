@@ -88,7 +88,7 @@ To rerun the bench, generate the questions once (`python pipeline/make_questions
 
 - The bench used synthetic voices. The guard threshold and the latency felt on a phone remain to be checked with real voices.
 - Each bench exchange is a single turn. Reading back the name, reason and number over several turns was tested only in two simulated sessions, where the assistant skipped reading the number digit by digit.
-- The STT heard the company name "Lumen Films" as "L'Humaine Film", and the note copied the error. "Ismaël" was sometimes heard as "Ismail" in English.
+- The STT heard the company name in the test scenario wrongly, and the note copied the error. "Ismaël" was sometimes heard as "Ismail" in English.
 - The last sentence of the assistant, cut by the disconnection, is only partly in the transcript.
 - A local model of this size answers and takes notes. Whether it can hold a negotiation or a decision bound by rules was not tested; the calling agent below uses Claude for that reason.
 - No telephone line is connected. Calls come from a browser over WebRTC.
