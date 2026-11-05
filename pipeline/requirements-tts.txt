@@ -1,0 +1,5 @@
+# Versions installed in the measured setup (read on 2026-11-05)
+vllm==0.32.0
+vllm-omni==0.32.0
+torch==2.13.0
+PyYAML==6.0.3

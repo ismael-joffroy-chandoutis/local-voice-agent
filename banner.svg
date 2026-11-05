@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 400" width="1280" height="400" role="img" aria-label="Local voice agent">
+  <rect width="1280" height="400" fill="#0B0B0C"/>
+  <g fill="none" stroke="#3A3A3C" stroke-width="1.25">
+    <rect x="900" y="120" width="120" height="200"/><line x1="920" y1="150" x2="1000" y2="150"/><line x1="920" y1="168" x2="1000" y2="168"/><line x1="920" y1="186" x2="1000" y2="186"/>
+    <rect x="1050" y="130" width="150" height="100"/><line x1="1125" y1="230" x2="1125" y2="262"/><line x1="1090" y1="262" x2="1160" y2="262"/>
+    <path d="M1020 300 C 1040 330, 1080 280, 1110 310 S 1170 340, 1200 300"/><path d="M960 320 C 950 360, 990 380, 1010 350"/>
+    <rect x="1062" y="142" width="126" height="76" stroke-dasharray="3 5"/>
+  </g>
+  <circle cx="990" cy="300" r="3.5" fill="#FF4400"/>
+  <text x="96" y="196" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-weight="300" font-size="60" letter-spacing="0.5" fill="#EDEAE3">Local voice agent</text>
+  <text x="98" y="240" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-weight="300" font-size="21" letter-spacing="0.3" fill="#8F8B84">A voice pipeline on one GPU, and a calling agent behind a go</text>
+</svg>

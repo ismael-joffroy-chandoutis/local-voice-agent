@@ -1,0 +1,10 @@
+*.htm*
+.env
+*.wav
+.DS_Store
+__pycache__/
+logs/
+calls/
+questions/
+qwen3_tts_local.yaml
+*.cleaned.md

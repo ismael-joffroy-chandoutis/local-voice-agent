@@ -1,0 +1,15 @@
+# Versions installed in the measured setup (read on 2026-11-05)
+# Extras for Silero VAD, Smart Turn v3 and the WebRTC transport may be needed:
+# see the Pipecat documentation for your version.
+pipecat-ai==1.7.0
+httpx==0.28.1
+numpy==2.4.6
+soxr==1.0.0
+websockets==17.0.1
+loguru==0.7.3
+starlette==1.4.1
+aiortc==1.15.0
+av==17.1.0
+# for make_questions.py and make_scenarios.py
+kokoro
+soundfile
