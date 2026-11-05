@@ -379,7 +379,8 @@ def warm_up():
 
 
 def access_filter():
-    """Refuses requests whose identity header names another user than ALLOWED_USER."""
+    """When enabled, refuses every request whose identity header is missing or names another user.
+    The reverse proxy must set this header itself and drop any copy sent by the client."""
     if not (ALLOWED_USER_HEADER and ALLOWED_USER):
         return
     from pipecat.runner import run as runner
@@ -387,8 +388,8 @@ def access_filter():
 
     async def check(request, call_next):
         who = request.headers.get(ALLOWED_USER_HEADER.lower())
-        if who and who.lower() != ALLOWED_USER.lower():
-            logger.warning(f"access refused to {who}")
+        if not who or who.strip().lower() != ALLOWED_USER.lower():
+            logger.warning(f"access refused to {who or 'request without identity header'}")
             return PlainTextResponse("access restricted", status_code=403)
         return await call_next(request)
 

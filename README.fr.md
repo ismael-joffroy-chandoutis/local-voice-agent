@@ -80,7 +80,7 @@ bash pipeline/scripts/start-all.sh
 bash pipeline/scripts/stop-all.sh # arrête tout et affiche la mémoire de carte encore occupée
 ```
 
-Placer un reverse proxy HTTPS devant le port 7860 : un navigateur ne donne le micro qu'à une page sécurisée. Si le proxy ajoute un en-tête avec l'utilisateur authentifié, `ALLOWED_USER_HEADER` et `ALLOWED_USER` font refuser tout autre utilisateur par un 403.
+Placer un reverse proxy HTTPS devant le port 7860 : un navigateur ne donne le micro qu'à une page sécurisée. Si le proxy ajoute un en-tête avec l'utilisateur authentifié, `ALLOWED_USER_HEADER` et `ALLOWED_USER` font refuser par un 403 toute requête où cet en-tête manque ou nomme un autre utilisateur. Le proxy doit supprimer toute copie de l'en-tête envoyée par le client.
 
 Pour refaire le banc, fabriquer une fois les questions (`python pipeline/make_questions.py`, Kokoro sur CPU), puis `python pipeline/bench.py --out resultats --tours 3`. Pour essayer le vrai bot sans micro : `BOT_URL=https://votre-hote python pipeline/test_webrtc.py questions/fr3.wav reponse.wav`. `make_scenarios.py` fabrique deux scénarios à plusieurs tours, un appelant qui laisse un message et une dictée. Les noms et le numéro des questions de test sont fictifs. Rien ne redémarre seul après un redémarrage de la machine.
 

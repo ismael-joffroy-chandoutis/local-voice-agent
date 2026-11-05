@@ -80,7 +80,7 @@ bash pipeline/scripts/start-all.sh
 bash pipeline/scripts/stop-all.sh # stops everything and prints the GPU memory left in use
 ```
 
-Put an HTTPS reverse proxy in front of port 7860: browsers give the microphone only to a secure page. If the proxy adds a header with the authenticated user, `ALLOWED_USER_HEADER` and `ALLOWED_USER` make the bot refuse every other user with a 403.
+Put an HTTPS reverse proxy in front of port 7860: browsers give the microphone only to a secure page. If the proxy adds a header with the authenticated user, `ALLOWED_USER_HEADER` and `ALLOWED_USER` make the bot refuse, with a 403, every request where that header is missing or names another user. The proxy must drop any copy of the header sent by the client.
 
 To rerun the bench, generate the questions once (`python pipeline/make_questions.py`, Kokoro on CPU), then `python pipeline/bench.py --out results --tours 3`. To test the real bot without a microphone: `BOT_URL=https://your-host python pipeline/test_webrtc.py questions/fr3.wav answer.wav`. `make_scenarios.py` builds two multi-turn scenarios, a caller leaving a message and a dictation. The names and the phone number in the test questions are fictional. Nothing restarts by itself after a reboot.
 
